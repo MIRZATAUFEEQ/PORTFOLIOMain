@@ -8,8 +8,7 @@ import { toast } from "react-toastify"
 import Loadingbutton from "./loadingbutton/Loadingbutton"
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { forgotPassword } from "@/store/slices/forgotResetPasswordSlice";
-import { clearAllForgotPasswordErrors } from "../store/slices/forgotresetPasswordSlice";
+import { forgotPassword, clearAllForgotPasswordErrors } from "@/store/slices/forgotresetPasswordSlice";
 
 const ForgotPassword = ({
   className,
