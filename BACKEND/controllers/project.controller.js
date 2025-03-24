@@ -95,7 +95,7 @@ export const getAllProject = asyncHandler(async (req, res) => {
     res.status(200)
         .json({
             success: true,
-            message: 'fetched all skills',
+            message: 'fetched all project',
             project
         })
 })
