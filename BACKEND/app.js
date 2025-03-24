@@ -12,7 +12,8 @@ import userRoute from './routes/user.route.js'
 import timelineRoute from './routes/timeline.route.js'
 import skillRoute from './routes/skill.route.js'
 import projectRoute from './routes/project.route.js'
-
+import os from 'os';  // ✅ Added for temp dir fix
+import path from 'path';
 const app = express()
 
 app.use(cors({
@@ -22,16 +23,15 @@ app.use(cors({
 }))
 
 
-// React ke saare routes ko handle karein
-
 app.use(cookieParser())
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
+const tempDir = path.join(os.tmpdir(), 'uploads');
 app.use(fileUpload({
     useTempFiles: true,
-    tempFileDir: '/temp/'
-}))
+    tempFileDir: tempDir
+}));
 
 app.use('/api/v1/message', messageRoute)
 app.use('/api/v1/auth', userRoute)
