@@ -13,6 +13,7 @@ import timelineRoute from './routes/timeline.route.js'
 import skillRoute from './routes/skill.route.js'
 import projectRoute from './routes/project.route.js'
 import path from 'path';
+import { fileURLToPath } from 'url'
 const app = express()
 
 const __filename = fileURLToPath(import.meta.url);
