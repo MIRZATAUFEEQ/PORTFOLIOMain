@@ -43,8 +43,10 @@ app.use('/api/v1/timeline', timelineRoute)
 app.use('/api/v1/skill', skillRoute)
 app.use('/api/v1/project', projectRoute)
 
-const adminPath = path.join(__dirname, 'ADMIN_DASHBOARD', "dist");
-const portfolioPath = path.join(__dirname, 'PORTFOLIO', "dist");
+const adminFolder = "ADMIN_DASHBOARD"; 
+const portfolioFolder = "PORTFOLIO";
+const adminPath = path.join(__dirname, adminFolder, "dist");
+const portfolioPath = path.join(__dirname, portfolioFolder, "dist");
 // Admin Panel Serve
 app.use("/admin", express.static(adminPath));
 // Portfolio Serve
