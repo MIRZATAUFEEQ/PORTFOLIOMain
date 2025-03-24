@@ -178,7 +178,7 @@ export const updateProfile = (data) => async (dispatch) => {
     dispatch(userSlice.actions.updateProfileRequest());
     try {
         const response = await axios.put(
-            `${backendUrl}/api/v1/update/profile`,
+            `${backendUrl}/api/v1/auth/update/profile`,
             data,
             {
                 withCredentials: true,
