@@ -113,7 +113,6 @@ export const addNewProject = (data) => async (dispatch) => {
         headers: { "Content-Type": "multipart/form-data" },
       }
     );
-    console.log(response.data.message)
     dispatch(projectSlice.actions.addNewProjectSuccess(response.data.message));
     dispatch(projectSlice.actions.clearAllErrors());
   } catch (error) {

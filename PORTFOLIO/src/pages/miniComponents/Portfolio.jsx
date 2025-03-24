@@ -18,8 +18,6 @@ const Portfolio = () => {
           withCredentials: true,
         });
 
-        console.log("Fetched Projects:", response.data); // Debugging API response
-
         if (isMounted) {
           setProjects(response.data.project || []);
         }
