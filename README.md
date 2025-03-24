@@ -69,6 +69,9 @@ To deploy the project, you can use platforms like:
 ## Author
 **Your Name** - [GitHub](https://github.com/MIRZATAUFEEQ) | [LinkedIn](https://www.linkedin.com/in/mirza-taufeeq-17166b223/)
 
+## Contact
+Feel free to reach out via:
+-**LinkedIn**: - [LinkedIn](https://www.linkedin.com/in/mirza-taufeeq-17166b223/)
 ---
 Feel free to contribute or suggest improvements!
 
