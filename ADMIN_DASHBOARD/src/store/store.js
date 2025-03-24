@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit'
 import userReducer from './slices/userSlice.js'
-import forgotrestpassReducer from './slices/forgotresetPasswordSlice.js'
+import forgotrestpassReducer from './slices/forgotResetPasswordSlice.js'
 import messageReducer from './slices/messageSlice.js'
 import timelineReducer from './slices/timelineSlice.js'
 import projectReducer from './slices/projectSlice.js'
