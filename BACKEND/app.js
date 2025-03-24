@@ -43,10 +43,31 @@ app.use('/api/v1/timeline', timelineRoute)
 app.use('/api/v1/skill', skillRoute)
 app.use('/api/v1/project', projectRoute)
 
-app.use(express.static(path.join(__dirname, "client", "dist")));
+const adminPath = path.join(__dirname, 'ADMIN_DASHBOARD', "dist");
+const portfolioPath = path.join(__dirname, 'PORTFOLIO', "dist");
+// Admin Panel Serve
+app.use("/admin", express.static(adminPath));
+// Portfolio Serve
+app.use("/", express.static(portfolioPath));
 
+// Admin Panel Routes
+app.get("/admin/*", (req, res) => {
+    res.sendFile(path.join(adminPath, "index.html"), (err) => {
+        if (err) {
+            console.error("Error serving admin panel index.html:", err);
+            res.status(500).send("Internal Server Error");
+        }
+    });
+});
+
+// Portfolio Routes
 app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
+    res.sendFile(path.join(portfolioPath, "index.html"), (err) => {
+        if (err) {
+            console.error("Error serving portfolio index.html:", err);
+            res.status(500).send("Internal Server Error");
+        }
+    });
 });
 
 app.use(errorMiddleware)
